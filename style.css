@@ -1,0 +1,102 @@
+body {
+    background-color: #ffe6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+}
+
+.envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: pink;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.8s ease;
+}
+
+.top-fold {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #ff80a4;
+    border-radius: 10px 10px 0 0;
+    transform-origin: top;
+    transition: transform 0.8s ease;
+}
+
+.bottom-fold {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: pink;
+    border-radius: 0 0 10px 10px;
+}
+
+.letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+}
+
+.letter p {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#yesBtn {
+    background: red;
+    color: white;
+}
+
+#noBtn {
+    background: black;
+    color: white;
+    position: absolute;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    clip-path: polygon(50% 0%, 100% 40%, 75% 100%, 50% 80%, 25% 100%, 0% 40%);
+    animation: floatUp 2s ease-in-out infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
